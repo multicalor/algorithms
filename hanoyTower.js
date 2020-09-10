@@ -17,70 +17,112 @@ const complitTower = (basis) => {
   // console.log(baseTwo)
   if (baseTwo.join("") === check.join("")) return basis;
 
+  baseThree.unshift(baseOne.shift());
+  console.log("1 :", basis);
+  baseTwo.unshift(baseOne.shift());
+  console.log("2 :", basis);
+  baseTwo.unshift(baseThree.shift())
+  console.log("3 :", basis);
+  baseThree.unshift(baseOne.shift())
+  console.log("5 :", basis);
+  baseOne.unshift(baseTwo.shift())
+  console.log("6 :", basis);
+  baseThree.unshift(baseTwo.shift())
+  console.log("7 :", basis);
+  baseThree.unshift(baseOne.shift())
+  console.log("8 :", basis);
+  baseTwo.unshift(baseOne.shift())
+  console.log("9 :", basis);
+  baseTwo.unshift(baseThree.shift())
+  console.log("3 :", basis);
+  baseOne.unshift(baseThree.shift())
+  console.log("10 :", basis);
+  baseOne.unshift(baseTwo.shift())
+  console.log("6 :", basis);
+  baseTwo.unshift(baseThree.shift())
+  console.log("3 :", basis);
+  baseThree.unshift(baseOne.shift())
+  console.log("8 :", basis);
+  baseTwo.unshift(baseOne.shift());
+  console.log("2 :", basis);
+  baseTwo.unshift(baseThree.shift())
+  console.log("3 :", basis);
+  
+
+  
+
+// }
+
   //  console.log(++count)
   // 1 4 7
-  if (
-    (baseTwo.length === 0) & (baseThree.length === 0) 
-    // ||(baseTwo.length === 0) & (baseOne[0] > baseThree[0]) ||
-    // (baseThree.length === 0) & (baseTwo[0] > baseOne[0]) ||
-    // baseOne[0] > baseTwo[0] > baseThree[0]
-  ) {
-    baseTwo.unshift(baseOne.shift());
-    console.log("1 4 7:", basis);
-  }
+//   if (
+//     (baseTwo.length === 0) &
+//     (baseThree.length === 0)
+//     ||(baseTwo.length === 0) & (baseOne[0] > baseThree[0]) ||
+//     (baseThree.length === 0) & (baseOne[0] > baseTwo[0] ) ||
+//     baseOne[0] > baseTwo[0] & baseTwo[0] > baseThree[0]
+//   ) {
+//     baseTwo.unshift(baseOne.shift());
+//     console.log("1 :", basis);
+//   }
 
-  if (
-    (baseThree.length === 0) & (baseOne[0] > baseTwo[0]) ||
-    baseThree[0] > baseTwo[0] ||
-    (baseThree.length === 0) & (baseOne[0] > baseTwo[0])
-  ) {
-    baseThree.unshift(baseOne.shift());
-    console.log("2:", basis);
-  }
+//   if (
+//     (baseThree.length === 0) & (baseOne[0] > baseTwo[0]) ||
+//     (baseThree[0] > baseTwo[0]) & (baseTwo[0] > baseOne[0]) ||
+//     (baseThree.length === 0) & (baseOne[0] > baseTwo[0])
+//   ) {
+//     baseThree.unshift(baseOne.shift());
+//     console.log("2:", basis);
+//   }
 
-  if (
-    baseOne[0] > baseThree[0]
-    || (baseOne.length === 0) & (baseThree[0] > baseTwo[0])
-  ) {
-    baseThree.unshift(baseTwo.shift());
-    console.log("3:", basis);
-  }
+//   if (
+//     baseOne[0] > baseThree[0] ||
+//     (baseOne.length === 0) & (baseThree[0] > baseTwo[0]) ||
+//     baseThree.length === 0 & baseOne[0] >  baseTwo[0]
+//   ) {
+//     baseThree.unshift(baseTwo.shift());
+//     console.log("3:", basis);
+//   }
 
-  if (
-    // (baseTwo.length === 0) & (baseThree.length === 0) ||
-    (baseTwo.length === 0) & (baseOne[0] > baseThree[0]) 
+//   if (
+//     // (baseTwo.length === 0) & (baseThree.length === 0) ||
+//     (baseTwo.length === 0) &
+//     (baseOne[0] > baseThree[0])
     //|| (baseThree.length === 0) & (baseTwo[0] > baseOne[0]) ||
     // baseOne[0] > baseTwo[0] > baseThree[0]
-  ) {
-    baseTwo.unshift(baseOne.shift());
-    console.log("1 4 7:", basis);
-  }
+//   ) {
+//     baseTwo.unshift(baseOne.shift());
+//     console.log("4:", basis);
+//   }
 
-  if (
-    baseOne.length === 0 & (baseTwo[0] > baseThree[0]) ||
-    baseOne[0] > baseTwo[0]
-  ) {
-    baseOne.unshift(baseThree.shift());
-    console.log("5:", basis);
-  }
+//   if (
+//     (baseOne.length === 0) &
+//       (baseTwo[0] > baseThree[0])||
+//     baseOne[0] > baseTwo[0]
+//     || (baseOne.length === 0) & baseThree[0] > baseTwo[0]
+//   ) {
+//     baseOne.unshift(baseThree.shift());
+//     console.log("5:", basis);
+//   }
 
-  if (baseTwo[0] > baseThree[0]) {
-    baseTwo.unshift(baseThree.shift());
-    console.log("6:", basis);
-  }
+//   if (
+//     baseTwo[0] > baseThree[0] ||
+//     (baseOne.length === 0) & (baseTwo[0] > baseThree[0])
+//   ) {
+//     baseTwo.unshift(baseThree.shift());
+//     console.log("6:", basis);
+//   }
 
-  if (
-    // (baseTwo.length === 0) & (baseThree.length === 0) 
+//   if (
+    // (baseTwo.length === 0) & (baseThree.length === 0)
     // ||(baseTwo.length === 0) & (baseOne[0] > baseThree[0]) ||
-    (baseThree.length === 0) & (baseTwo[0] > baseOne[0])
+    // (baseThree.length === 0) &
+    // (baseTwo[0] > baseOne[0])
     //  ||baseOne[0] > baseTwo[0] > baseThree[0]
-  ) {
-    baseTwo.unshift(baseOne.shift());
-    console.log("1 4 7:", basis);
-  }
-
-
-
+//   ) {
+//     baseTwo.unshift(baseOne.shift());
+//     console.log("7:", basis);
+//   }
 
   // if(!baseOne[0] & baseTwo[0] > baseThree[0]  ||baseOne[0] > baseTwo[0] > baseThree[0]   ) {
   //     baseOne.unshift(baseThree.shift())
